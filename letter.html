@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Certified 💖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            font-family: "Times New Roman", serif;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            max-width: 450px;
+            width: 90%;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+        }
+
+        h1 {
+            text-align: center;
+            color: #b30000;
+            font-family: Georgia, serif;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            margin: 20px 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: #ff2a22;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button:hover {
+            background-color: #e6211a;
+        }
+
+        /* Certificate */
+        .certificate {
+            display: none;
+            border: 4px double #b30000;
+            padding: 25px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .certificate h2 {
+            margin: 10px 0;
+            color: #b30000;
+        }
+
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <form id="quiz">
+        <h1>Quick Questions 💌</h1>
+        <p class="subtitle">Answer honestly 😌</p>
+
+        <div class="question">
+            <p>1. Do you love RIYA?</p>
+            <label><input type="radio" name="q1"> Obviously 😍</label>
+            <label><input type="radio" name="q1"> Yes 😍</label>
+        </div>
+
+        <div class="question">
+            <p>2. Riri or Ruii Ruii?</p>
+            <label><input type="radio" name="q2"> Riri 🍫</label>
+            <label><input type="radio" name="q2"> Ruii Ruii 🌸</label>
+        </div>
+
+        <div class="question">
+            <p>3. Will you be my Bhondu?</p>
+            <label><input type="radio" name="q3"> YES 💕</label>
+            <label><input type="radio" name="q3"> ABSOLUTELY YES 💖</label>
+        </div>
+
+        <button type="button" onclick="submitQuiz()">Submit 💖</button>
+    </form>
+
+    <!-- Certificate -->
+    <div class="certificate" id="certificate">
+        <h1 style="font-size:clamp(18px, 3vw, 26px); text-align:center;">
+    🏆&nbsp;Certificate&nbsp;of&nbsp;Best&nbsp;Boyfriend&nbsp;Ever&nbsp;🏆
+</h1>
+
+
+        <p>This certificate is proudly presented to</p>
+
+        <div class="name">💘 Abdul Muizz 💘</div>
+
+        <p>
+            For being caring, supportive,<br>
+            and absolutely amazing 💖
+        </p>
+
+        <div class="footer">
+            Awarded with love 💕<br>
+            Valentine’s Day
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function submitQuiz() {
+        const q1 = document.querySelector('input[name="q1"]:checked');
+        const q2 = document.querySelector('input[name="q2"]:checked');
+        const q3 = document.querySelector('input[name="q3"]:checked');
+
+        if (!q1 || !q2 || !q3) {
+            alert("Please answer all the questions 💌");
+            return;
+        }
+
+        document.getElementById("quiz").style.display = "none";
+        document.getElementById("certificate").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
