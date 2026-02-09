@@ -251,3 +251,18 @@ body {
     white-space: nowrap;
 }
 
+.cert-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    color: #b30000;
+    text-align: center;
+    flex-wrap: nowrap;
+}
+
+.trophy {
+    font-size: 22px;
+}
+
